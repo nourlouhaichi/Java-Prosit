@@ -35,7 +35,8 @@ public class ZooManagement {
         //Instruction7:
         Animal lion= new Animal("family","pyke",5,true);
         Animal tiger= new Animal("family","tigro",2,true);
-        Zoo myZoo= new Zoo("zoo","tunis",25);
+        //Instruction14:
+        Zoo myZoo= new Zoo("zoo","tunis");
 
         //Instruction8:
         myZoo.displayZoo();
@@ -62,9 +63,17 @@ public class ZooManagement {
         System.out.println(myZoo.searchAnimal(tiger));
 
         //Instruction13:
-        myZoo.removeAnimal(lion);
+        //myZoo.removeAnimal(lion);
         System.out.println("****************************************/ Affichage de nouveau tableau /*****************************************************************");
         myZoo.listAnimal();
+
+        //Instruction15 :
+        myZoo.isZooFull();
+
+        //Instruction16:
+        Zoo myZoo2= new Zoo("zoo2","tunis2");
+        myZoo2.addAnimal(lion);
+        System.out.println(myZoo.comparerZoo(myZoo,myZoo2));
 
     }
 }
