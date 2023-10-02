@@ -1,3 +1,7 @@
+//Instruction19:
+package tn.esprit.gestionzoo.main;
+import tn.esprit.gestionzoo.entities.*;
+
 import java.util.Scanner;
 
 //Instruction1:

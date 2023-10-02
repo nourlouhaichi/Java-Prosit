@@ -1,11 +1,21 @@
+//Instruction19:
+package tn.esprit.gestionzoo.entities;
+
 //Instruction5:
 public class Zoo {
-    Animal [] animals;
-    String name;
-    String city;
+    //Instruction18:
+    private Animal [] animals;
+    private String name;
+    private String city;
     //Instruction14:
-    final int NBRCAGES=25;
-    int compteur=0;
+    private final int NBRCAGES=25;
+    private int compteur=0;
+
+    public Zoo() {
+        animals = new Animal[NBRCAGES];
+        this.name = "";
+        this.city = "";
+    }
 
     //Instruction6:
     public Zoo(String name, String city) {
@@ -36,7 +46,8 @@ public class Zoo {
     public boolean addAnimal(Animal animal) {
         //Instruction12:
         if(searchAnimal(animal)!=-1) return false;
-        if(this.compteur==this.NBRCAGES) return false;
+        //Instruction17:
+        if(isZooFull()) return false;
         else {
             this.animals[this.compteur] = animal;
             this.compteur = this.compteur + 1;
@@ -54,7 +65,7 @@ public class Zoo {
 
     public int searchAnimal(Animal animal) {
         for (int i = 0; i < this.compteur; i++) {
-            if (animal.name == this.animals[i].name) {
+            if (animal.getName() == this.animals[i].getName()) {
                 return i;
             }
         }
@@ -94,5 +105,22 @@ public class Zoo {
            return z1;
         else
             return z2;
+    }
+
+    //Instruction18:
+    ///Getters
+    public String getName() {
+        return this.name;
+    }
+    public String getCity() {
+        return this.city;
+    }
+    ///Setters
+    public void setName(String name) {
+        if (name != null && !name.isEmpty()) this.name = name;
+        else System.out.println("Le nom de zoo doit être ecrit");
+    }
+    public void setCity(String city) {
+        this.city = city;
     }
 }
