@@ -79,5 +79,28 @@ public class ZooManagement {
         myZoo2.addAnimal(lion);
         System.out.println(myZoo.comparerZoo(myZoo,myZoo2));
 
+        //Instruction21:
+        Aquatic aquatic1 = new Aquatic();
+        Terrestrial terrestrial1 = new Terrestrial();
+        Dolphin dolphin1 = new Dolphin();
+        Penguin penguin1 = new Penguin();
+
+        //Instruction22:
+        Aquatic aquatic2 = new Aquatic("lac");
+        Terrestrial terrestrial2 = new Terrestrial(4);
+        Dolphin dolphin2 = new Dolphin("ocean",37);
+        Penguin penguin2 = new Penguin("ocean",150);
+
+        System.out.println("****************************************/ Heritage /*****************************************************************");
+        //Instruction23:
+        System.out.println(aquatic2);
+        System.out.println(dolphin2);
+        System.out.println(penguin2);
+
+        //Instruction24:
+        aquatic2.swim(); //This aquatic animal is swimming.
+        dolphin2.swim(); //This dolphin is swimming.
+        penguin2.swim(); //This aquatic animal is swimming.
+
     }
 }
