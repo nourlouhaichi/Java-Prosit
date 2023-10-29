@@ -9,7 +9,7 @@ public class Zoo {
     private String city;
 
     //Instruction14:
-    private final int NBRCAGES=25;
+    private final int NBRCAGES=3;
     private int compteur=0;
     //Instruction25:
     public Aquatic[] aquaticAnimals;
@@ -52,7 +52,7 @@ public class Zoo {
     }
 
     //Instruction10:
-    public boolean addAnimal(Animal animal) {
+    /*public boolean addAnimal(Animal animal) {
         //Instruction12:
         if(searchAnimal(animal)!=-1) return false;
         //Instruction17:
@@ -62,7 +62,7 @@ public class Zoo {
             this.compteur = this.compteur + 1;
             return true;
         }
-    }
+    }*/
 
     //Instruction11:
     public void listAnimal() {
@@ -168,4 +168,19 @@ public class Zoo {
         System.out.println("Nombre Penguin: "+nbrPenguin);
         System.out.println("Nombre Dolphin: "+nbrDolphin);
     }
+
+    //Instruction32:
+    public void addAnimal(Animal animal) throws ZooFullException, InvalidAgeException {
+        if(searchAnimal(animal)==-1) {
+            if (this.compteur<NBRCAGES) {
+                this.animals[this.compteur] = animal;
+                this.compteur = this.compteur + 1;
+            }
+            else throw new ZooFullException("Zoo Full");
+            if (animal.age < 0) {
+                throw new InvalidAgeException();
+            }
+        }
+    }
+
 }

@@ -51,10 +51,10 @@ public class ZooManagement {
         System.out.println(lion);
 
         //Instruction10:
-        for (int i = 0; i < 1; i++) {
+        /*for (int i = 0; i < 1; i++) {
             myZoo.addAnimal(lion);
             myZoo.addAnimal(tiger);
-        }
+        }*/
         /*Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 25 out of bounds for length 25
         at Zoo.addAnimal(Zoo.java:37)
         at ZooManagement.main(ZooManagement.java:49)*/
@@ -76,7 +76,7 @@ public class ZooManagement {
 
         //Instruction16:
         Zoo myZoo2 = new Zoo("zoo2", "tunis2");
-        myZoo2.addAnimal(lion);
+        //myZoo2.addAnimal(lion);
         System.out.println(myZoo.comparerZoo(myZoo, myZoo2));
 
         //Instruction21:
@@ -109,7 +109,7 @@ public class ZooManagement {
         zoo.addAquaticAnimal(penguin2);
 
         //Instruction27:
-        for (int i = 0; i < zoo.compteur2 ; i++) {
+        for (int i = 0; i < zoo.compteur2; i++) {
             zoo.aquaticAnimals[i].swim();
         }
 
@@ -124,6 +124,20 @@ public class ZooManagement {
         Dolphin dolphin4 = new Dolphin("beachgr", 33);
         System.out.println(dolphin2.equals(dolphin3)); //true
         System.out.println(dolphin4.equals(dolphin3)); //False
-    }
 
+        System.out.println("****************************************/ Exception /*****************************************************************");
+        //Instruction33:
+        Animal lion2 = new Animal("family", "p", 5, true);
+        Animal tiger2 = new Animal("family", "t", -2, true);
+        try {
+            zoo.addAnimal(lion);
+            zoo.addAnimal(tiger);
+            zoo.addAnimal(lion2);
+            zoo.addAnimal(tiger2);
+        } catch (ZooFullException e) {
+            System.out.println(e.getMessage());
+        } catch (InvalidAgeException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }
