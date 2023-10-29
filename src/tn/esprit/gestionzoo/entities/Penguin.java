@@ -21,4 +21,9 @@ public class Penguin extends Aquatic {
     {
         return "Habitat: " + super.habitat + ", Swimming Depth: " + this.swimmingDepth ;
     }
+
+    //Instruction28 :
+    public void swim() {
+        System.out.println("This penguin is swimming.");
+    }
 }

@@ -3,6 +3,7 @@ package tn.esprit.gestionzoo.entities;
 public class Dolphin extends Aquatic {
     //Instruction22:
     protected float swimmingSpeed;
+
     //Instruction21:
     public Dolphin() {
         super();

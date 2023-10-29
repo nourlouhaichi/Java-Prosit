@@ -4,10 +4,10 @@ package tn.esprit.gestionzoo.entities;
 //Instruction5:
 public class Animal {
     //Instruction18:
-    private String family;
-    private String name;
-    private int age;
-    private boolean isMammal;
+    protected String family;
+    protected String name;
+    protected int age;
+    protected boolean isMammal;
 
     public Animal() {
         this.family = "";
@@ -45,6 +45,7 @@ public class Animal {
     public boolean isMammal() {
         return this.isMammal;
     }
+
     ///Setters
     public void setFamily(String family) {
         this.family=family;

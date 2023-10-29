@@ -7,14 +7,21 @@ public class Zoo {
     private Animal [] animals;
     private String name;
     private String city;
+
     //Instruction14:
     private final int NBRCAGES=25;
     private int compteur=0;
+    //Instruction25:
+    public Aquatic[] aquaticAnimals;
+    //Instruction26:
+    public int compteur2=0;
 
     public Zoo() {
         animals = new Animal[NBRCAGES];
         this.name = "";
         this.city = "";
+        //Instruction25:
+        aquaticAnimals = new Aquatic[10];
     }
 
     //Instruction6:
@@ -22,6 +29,8 @@ public class Zoo {
         animals = new Animal[NBRCAGES];
         this.name = name;
         this.city = city;
+        //Instruction25:
+        aquaticAnimals = new Aquatic[10];
     }
 
     //Instruction8:
@@ -122,5 +131,41 @@ public class Zoo {
     }
     public void setCity(String city) {
         this.city = city;
+    }
+
+    //Instruction26:
+    public void addAquaticAnimal(Aquatic aquatic) {
+        if (this.compteur2 < 10) {
+            this.aquaticAnimals[this.compteur2] =aquatic;
+            this.compteur2 = this.compteur2 + 1;
+        }
+    }
+
+    //Instruction29:
+    public float maxPenguinSwimmingDepth() {
+        float max = 0;
+        for (int i = 0; i < this.compteur2; i++) {
+            if (this.aquaticAnimals[i] instanceof Penguin peng) {
+                if (max < peng.swimmingDepth){
+                    max = peng.swimmingDepth;
+                }
+            }
+        }
+        return max;
+    }
+
+    //Instruction30:
+    public void displayNumberOfAquaticsByType() {
+        int nbrPenguin=0,nbrDolphin=0;
+        for (int i = 0; i < this.compteur2; i++) {
+            if (this.aquaticAnimals[i] instanceof Penguin) {
+                nbrPenguin = nbrPenguin + 1;
+            }
+            else if (this.aquaticAnimals[i] instanceof Dolphin) {
+                nbrDolphin = nbrDolphin +1;
+            }
+        }
+        System.out.println("Nombre Penguin: "+nbrPenguin);
+        System.out.println("Nombre Dolphin: "+nbrDolphin);
     }
 }
