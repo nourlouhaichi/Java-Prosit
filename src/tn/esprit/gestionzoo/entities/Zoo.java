@@ -18,8 +18,6 @@ public class Zoo {
 
     public Zoo() {
         animals = new Animal[NBRCAGES];
-        this.name = "";
-        this.city = "";
         //Instruction25:
         aquaticAnimals = new Aquatic[10];
     }
@@ -89,9 +87,9 @@ public class Zoo {
         else {
             for (int i = searchAnimal(animal); i < this.compteur; i++) {
                 this.animals[i] = this.animals[i + 1];
-                this.animals[this.compteur] = null;
-                this.compteur=this.compteur-1;
             }
+            this.animals[this.compteur] = null;
+            this.compteur=this.compteur-1;
             return true;
         }
     }

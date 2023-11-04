@@ -5,12 +5,11 @@ public abstract class Aquatic extends Animal {
     protected  String habitat;
 
     //Instruction21:
-    public Aquatic() {
-        this.habitat="";
-    }
+    public Aquatic() {}
 
     //Instruction22:
-    public Aquatic(String habitat) {
+    public Aquatic(String family, String name, int age, boolean isMammal, String habitat) {
+        super(family, name, age, isMammal);
         this.habitat=habitat;
     }
 
@@ -18,7 +17,7 @@ public abstract class Aquatic extends Animal {
     @Override
     public String toString()
     {
-        return "Habitat: " + this.habitat  ;
+        return " " + super.toString() + "Habitat: " + this.habitat  ;
     }
 
     //Instruction24:

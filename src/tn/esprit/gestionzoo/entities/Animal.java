@@ -9,12 +9,7 @@ public class Animal {
     protected int age;
     protected boolean isMammal;
 
-    public Animal() {
-        this.family = "";
-        this.name = "";
-        this.age = 0;
-        this.isMammal = false;
-    }
+    public Animal() {}
 
     //Instruction6:
     public Animal(String family, String name, int age, boolean isMammal) {

@@ -86,10 +86,10 @@ public class ZooManagement {
         Penguin penguin1 = new Penguin();
 
         //Instruction22:
-        //Aquatic aquatic2 = new Aquatic("lac");
-        Terrestrial terrestrial2 = new Terrestrial(4);
-        Dolphin dolphin2 = new Dolphin("ocean", 37);
-        Penguin penguin2 = new Penguin("ocean", 150);
+        //Aquatic aquatic2 = new Aquatic("family", "pyke", 5, true,"lac");
+        Terrestrial terrestrial2 = new Terrestrial("family", "pyke", 5, true,4);
+        Dolphin dolphin2 = new Dolphin("family", "dol", 5, true,"ocean", 37);
+        Penguin penguin2 = new Penguin("family", "peg", 5, true, "ocean", 150);
 
         System.out.println("****************************************/ Heritage /*****************************************************************");
         //Instruction23:
@@ -120,8 +120,8 @@ public class ZooManagement {
         zoo.displayNumberOfAquaticsByType();
 
         //Instruction31:
-        Dolphin dolphin3 = new Dolphin("ocean", 37);
-        Dolphin dolphin4 = new Dolphin("beachgr", 33);
+        Dolphin dolphin3 = new Dolphin("family", "dophin1", 5, true,"ocean", 37);
+        Dolphin dolphin4 = new Dolphin("family", "dophin2", 5, true,"beachgr", 33);
         System.out.println(dolphin2.equals(dolphin3)); //true
         System.out.println(dolphin4.equals(dolphin3)); //False
 

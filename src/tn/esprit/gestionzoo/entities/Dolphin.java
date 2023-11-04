@@ -5,22 +5,19 @@ public class Dolphin extends Aquatic {
     protected float swimmingSpeed;
 
     //Instruction21:
-    public Dolphin() {
-        super();
-        this.swimmingSpeed=0;
-    }
+    public Dolphin() {}
 
     //Instruction22:
-    public Dolphin(String habitat, float swimmingSpeed) {
-        super(habitat);
-        this.swimmingSpeed=swimmingSpeed;
+    public Dolphin(String family, String name, int age, boolean isMammal, String habitat, float swimmingSpeed) {
+        super(family, name, age, isMammal, habitat);
+        this.swimmingSpeed = swimmingSpeed;
     }
 
     //Instruction23:
     @Override
     public String toString()
     {
-        return "Habitat: " + super.habitat + ", swimmingSpeed: " + this.swimmingSpeed ;
+        return " " + super.toString() + "swimmingSpeed: " + this.swimmingSpeed ;
     }
 
     //Instruction24:

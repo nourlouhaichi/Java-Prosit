@@ -4,22 +4,19 @@ public class Penguin extends Aquatic {
     //Instruction22:
     protected float swimmingDepth;
     //Instruction21:
-    public Penguin() {
-        super();
-        this.swimmingDepth=0;
-    }
+    public Penguin() {}
 
     //Instruction22:
-    public Penguin(String habitat, float swimmingDepth) {
-        super(habitat);
-        this.swimmingDepth=swimmingDepth;
+    public Penguin(String family, String name, int age, boolean isMammal, String habitat, float swimmingDepth) {
+        super(family, name, age, isMammal, habitat);
+        this.swimmingDepth = swimmingDepth;
     }
 
     //Instruction23:
     @Override
     public String toString()
     {
-        return "Habitat: " + super.habitat + ", Swimming Depth: " + this.swimmingDepth ;
+        return " " + super.toString() + ", Swimming Depth: " + this.swimmingDepth ;
     }
 
     //Instruction28 :
