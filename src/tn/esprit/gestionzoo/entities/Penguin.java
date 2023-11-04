@@ -20,6 +20,7 @@ public class Penguin extends Aquatic {
     }
 
     //Instruction28 :
+    @Override
     public void swim() {
         System.out.println("This penguin is swimming.");
     }
