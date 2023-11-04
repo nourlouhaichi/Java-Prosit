@@ -139,5 +139,14 @@ public class ZooManagement {
         } catch (InvalidAgeException e) {
             System.out.println(e.getMessage());
         }
+
+        //Instruction38:
+        Aquatic aquatic = new Dolphin("family", "dol", 5, true,"ocean", 37);
+        aquatic.eatMeat(Food.MEAT); //Aquatic animal is eating meat.
+        aquatic.eatMeat(Food.PLANT); //Aquatic animal doesn't eat this type of food.
+
+        terrestrial1.eatMeat(Food.MEAT); //Terrestrial animal is eating meat.
+        terrestrial1.eatPlant(Food.PLANT); //Terrestrial animal is eating plants.
+        terrestrial1.eatPlantAndMeat(Food.BOTH);//Terrestrial animal is eating both plants and meat.
     }
 }
