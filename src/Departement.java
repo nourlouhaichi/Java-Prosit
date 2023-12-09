@@ -15,7 +15,7 @@ public class Departement {
 
     @Override
     public String toString() {
-        return "Departement: ID: " + id + "Nom: " + nom + "Nombre des employes: " + nbemploye;
+        return "Departement: ID: " + id + " Nom: " + nom + " Nombre des employes: " + nbemploye + "\n";
     }
 
     @Override
