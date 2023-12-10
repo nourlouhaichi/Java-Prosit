@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Departement {
+public class Departement implements Comparable<Departement> {
     private int id;
     private String nom;
     private int nbemploye;
@@ -31,6 +31,11 @@ public class Departement {
     @Override
     public int hashCode() {
         return Objects.hash(id, nom, nbemploye);
+    }
+
+    @Override
+    public int compareTo(Departement dep) {
+        return id - dep.getId();
     }
 
     public int getId() {
